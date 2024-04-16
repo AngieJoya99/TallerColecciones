@@ -12,8 +12,8 @@ package object Canicas{
       * @return Lista con posibles configuraciones
       */
     def canicasPosiblesFrasco (f:Int, c:Int) : List[Frasco] ={
-        val lista = for{canicas <- 0 to c} yield (f,canicas)
-        lista.toList
+      val lista = for(canicas <- 0 to c) yield (f,canicas)
+      lista.toList
     }
 
     /**
@@ -23,20 +23,18 @@ package object Canicas{
       * @return Lista con posibles configuraciones
       */
     def canicasPorFrasco (n:Int, c:Int) : List[Distr] = {
-        val lista = for{
-            frascos <- 1 to n
-        } yield (canicasPosiblesFrasco(frascos,c))
-        lista.toList
+      val lista = for(frascos <- 1 to n) yield (canicasPosiblesFrasco(frascos,c))
+      lista.toList
     }
 
     /**
-      * 
-      *
-      * @param lc
-      * @return
+      * Dada una lista de canicas lc, calcula todas las combinaciones
+      * posibles de canicas del frasco 1 con canicas del frasco 2-n 
+      * @param lc Lista de canicas posibles
+      * @return Lista de combinaciones posibles de canicas
       */
     def mezclarLCanicas (lc: List[Distr]) : List[Distr] ={
-        (Nil)::Nil
+      (Nil)::Nil
     }
 
     /**
@@ -48,7 +46,7 @@ package object Canicas{
       * @return
       */
     def distribucion (m:Int, n:Int, c:Int) : List[Distr] ={
-        (Nil)::Nil
+      (Nil)::Nil
     }
 
     /**
@@ -58,6 +56,6 @@ package object Canicas{
       * @return
       */
     def agrupaciones (m:Int): List[List[Int]]={
-        (Nil)::Nil
+      (Nil)::Nil
     }
 }
