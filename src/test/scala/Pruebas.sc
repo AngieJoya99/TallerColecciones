@@ -10,3 +10,6 @@ distribucion(10 ,3 ,5)
 distribucion(3 ,1 ,3)
 agrupaciones(6)
 agrupaciones(10)
+
+mezclarLCanicas(canicasPorFrasco(2,3))
+canicasPorFrasco(3,5)
