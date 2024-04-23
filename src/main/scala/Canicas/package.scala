@@ -69,7 +69,7 @@ package object Canicas{
     */
   def agrupaciones (m:Int): List[List[Int]]={
     val lista = for{
-      cont <- 1 to m/2
+      cont <- 1 to ((m/2)+1)
       distri <- distribucion(m,cont,m)
       if(!distri.map(_._2).contains(0) && distri.map(_._2).distinct==distri.map(_._2))
     }yield(distri.map(_._2)).toSet
