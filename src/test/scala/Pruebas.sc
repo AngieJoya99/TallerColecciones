@@ -2,7 +2,6 @@
 Emily Nuñez - 2240156*/
 
 import Canicas._
-import Canicas.agrupaciones
 
 canicasPosiblesFrasco(0 ,0)
 canicasPosiblesFrasco(7 ,7)

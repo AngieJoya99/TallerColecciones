@@ -2,8 +2,8 @@
 Emily Nuñez - 2240156*/
 
 package object Canicas{
-  type Frasco = (Int,Int) //(Numero identificador de frasco, cantidad canicas)
-  type Distr = List[Frasco] 
+  type Frasco = (Int,Int) //(Numero de frasco, cantidad canicas)
+  type Distr = List[Frasco] //Distribución de Frascos
 
   /**
     * Calcula las posibles configuraciones del frasco f con 0-c canicas
