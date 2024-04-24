@@ -3,7 +3,7 @@ Emily Nuñez - 2240156*/
 
 package object Canicas{
   type Frasco = (Int,Int) //(Numero identificador de frasco, cantidad canicas)
-  type Distr = List[Frasco] //Solución
+  type Distr = List[Frasco] 
 
   /**
     * Calcula las posibles configuraciones del frasco f con 0-c canicas
@@ -68,11 +68,12 @@ package object Canicas{
     * @return Lista con posibles combinaciones
     */
   def agrupaciones (m:Int): List[List[Int]]={
+    val contadorMax = (m.toDouble/2.0).ceil.toInt
     val lista = for{
-      cont <- 1 to ((m/2)+1)
+      cont <- 1 to contadorMax
       distri <- distribucion(m,cont,m)
       if(!distri.map(_._2).contains(0) && distri.map(_._2).distinct==distri.map(_._2))
     }yield(distri.map(_._2)).toSet
     lista.distinct.toList.map(_.toList)
-  }  
+  }
 }
