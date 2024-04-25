@@ -17,7 +17,7 @@ package object Canicas{
   }
 
   /**
-    * Calcula las posibles configuraciones de 0-n frascos con 0-c canicas
+    * Calcula las posibles configuraciones de 1-n frascos con 0-c canicas
     * @param n Cantidad de frascos
     * @param c Cantidad de Canicas
     * @return Lista con posibles configuraciones
@@ -56,7 +56,7 @@ package object Canicas{
     val combinaciones = mezclarLCanicas(canicasPorFrasco(n,c))
     val lista = for{
       combinacion <- combinaciones
-      if combinacion.map(_._2).sum == m
+      if combinacion.map(_._2).sum   == m
     }yield(combinacion)
     lista.toList
   }
