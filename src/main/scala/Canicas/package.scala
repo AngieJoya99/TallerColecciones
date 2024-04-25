@@ -54,13 +54,12 @@ package object Canicas{
     */
   def distribucion (m:Int, n:Int, c:Int) : List[Distr] ={
     val combinaciones = mezclarLCanicas(canicasPorFrasco(n,c))
-    val lista = for{
+    for{
       combinacion <- combinaciones
-      if combinacion.map(_._2).sum   == m
+      if combinacion.map(_._2).sum == m
     }yield(combinacion)
-    lista.toList
   }
-
+  
   /**
     * Calcula todas las maneras de dividir un conjunto de tamaño m
     * en grupos de tamaños diferentes
