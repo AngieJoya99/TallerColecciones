@@ -71,7 +71,7 @@ package object Canicas{
     val contadorMax = (m.toDouble/2.0).ceil.toInt
     val lista = for{
       cont <- 1 to contadorMax
-      distri <- distribucion(m,cont,m)
+      distri <- distribucion(m,contadorMax,m)
       if(!distri.map(_._2).contains(0) && distri.map(_._2).distinct==distri.map(_._2))
     }yield(distri.map(_._2)).toSet
     lista.distinct.toList.map(_.toList)
